@@ -15,7 +15,7 @@ import {
 //     projectId : '66e7d08000289ae865d1',
 //     databaseId : '66e7d16400309837cf91',
 //     userCollectionId : '66e7d1b600111dbb29c3',
-//     VideoCollectionId : '66e7d1c9002b16abdfe3',
+//     videoCollectionId : '66e7d1c9002b16abdfe3',
 //     storageId: '66e7d2e1003d90e32fa6'
 // }
 
@@ -26,9 +26,19 @@ export const config = {
   projectId : '66e68f5200103cc7a5ec',
   databaseId : '66e690e90017f746277f',
   userCollectionId : '66e69128002b91cdc04c',
-  VideoCollectionId : '66e691aa0010e56ae8e0',
+  videoCollectionId : '66e691aa0010e56ae8e0',
   storageId: '66e69e5a000661f5dd03'
 }
+
+const {
+  endpoint,
+  platform,
+  projectId, 
+  databaseId,
+  userCollectionId,
+  videoCollectionId,
+  storageId,
+} = config
 
 const client = new Client();
 
@@ -120,4 +130,15 @@ export async function getCurrentUser() {
   }
 }
 
+export const getAllPosts = async () => {
+  try {
+    const posts = await databases.listDocuments(
+      databaseId,
+      videoCollectionId
+    );
 
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
