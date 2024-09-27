@@ -4,12 +4,12 @@ This mobile application enables users to share AI-generated videos along with th
 
 ## Home Page
 
-![Home Page](images/home.jpg)
+![Home Page](imagesReadMe/home.jpg)
 
 ## Create Page
 
-![Create Page](images/create.jpg)
+![Create Page](imagesReadMe/create.jpg)
 
 ## User Page
 
-![User Page](images/user.jpg)
+![User Page](imagesReadMe/user.jpg)
